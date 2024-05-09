@@ -26,7 +26,7 @@
             "assets": ["src/favicon.ico", "src/assets"],
             "styles": [
               "src/styles.scss",
-              "src/assets/scss/style.scss",
+              "src/assets/scss/style.scss"
             ],
             "scripts": []
           },
@@ -66,6 +66,8 @@
             "development": {
               "browserTarget": "Modernize:build:development"
             }
+          },"options": {
+            "proxyConfig": "proxy.conf.json"
           },
           "defaultConfiguration": "development"
         },
