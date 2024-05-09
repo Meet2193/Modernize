@@ -8,7 +8,7 @@ import { DataService } from 'src/app/services/data.service';
 })
 export class AppSamplePageComponent implements OnInit {
   dataService = inject(DataService);
-  displayedColumns: string[] = ['Index','Symbol', 'Open', 'High','Low','PreClose','Ltp','Change','%Change','Volume','Value','52W H','52W L','30D %Change'];
+  displayedColumns: string[] = ['Image', 'Category', 'Price'];
 
   dataSource = [];
 
@@ -21,15 +21,15 @@ export class AppSamplePageComponent implements OnInit {
 
   getInitialData() {
     this.dataService.getAllData().subscribe((res: any) => {
-      console.log('Res Initial Data', res.data);
-      this.dataSource = res.data;
+      console.log('Res Initial Data', res);
+      this.dataSource = res;
     });
   }
 
   getAllData() {
     this.dataService.fetchDataEveryMinute().subscribe((res: any) => {
-      console.log('Res getAllData', res.data);
-      this.dataSource = res.data;
+      console.log('Res', res);
+      this.dataSource = res;
     });
   }
 }

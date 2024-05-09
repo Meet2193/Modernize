@@ -5,191 +5,48 @@
       <div class="table-responsive m-t-16">
         <table mat-table [dataSource]="dataSource" class="w-100">
           <!-- Image Column -->
-          <ng-container matColumnDef="Index">
+          <ng-container matColumnDef="Image">
             <th
               mat-header-cell
               *matHeaderCellDef
               class="f-w-600 mat-subtitle-1 f-s-14 header-cell bor-left"
             >
-              ID
+              Id
             </th>
-            <td mat-cell *matCellDef="let element; let i = index" class="mat-body-1">
+            <td mat-cell *matCellDef="let element" class="mat-body-1">
               <!-- <img
                 [src]="element.image"
                 alt="users"
                 width="40"
                 class="rounded-circle"
               /> -->
-              {{ i }}
+              {{ element.id }}
             </td>
           </ng-container>
 
-          <ng-container matColumnDef="Symbol">
+          <ng-container matColumnDef="Category">
             <th
               mat-header-cell
               *matHeaderCellDef
               class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
             >
-              SYMBOL
+              Category
             </th>
             <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.symbol }}
+              {{ element.category }}
             </td>
           </ng-container>
 
-          <ng-container matColumnDef="Open">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-            OPEN
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.open }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="High">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-            HIGH
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.dayHigh }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="Low">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-            LOW
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.dayLow }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="PreClose">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-            PREV. CLOSE
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.previousClose }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="Ltp">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-              LTP
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.lastPrice }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="Change">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-              CHNG
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.change }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="%Change">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-              %CHNG
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.pChange }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="Volume">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-            Volume
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.totalTradedVolume }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="Value">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-              VALUE
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.totalTradedValue }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="52W H">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-            52W H
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.yearHigh }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="52W L">
-            <th
-              mat-header-cell
-              *matHeaderCellDef
-              class="f-w-600 mat-subtitle-1 f-s-14 header-cell"
-            >
-            52W L
-            </th>
-            <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.yearLow }}
-            </td>
-          </ng-container>
-
-          <ng-container matColumnDef="30D %Change">
+          <ng-container matColumnDef="Price">
             <th
               mat-header-cell
               *matHeaderCellDef
               class="f-w-600 mat-subtitle-1 f-s-14 header-cell bor-right"
             >
-            30 D %CHNG            
+              Price
             </th>
             <td mat-cell *matCellDef="let element" class="mat-body-1">
-              {{ element.perChange30d }}
+              {{ element.price }}
             </td>
           </ng-container>
 
